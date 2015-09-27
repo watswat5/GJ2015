@@ -2,7 +2,6 @@
 using System.Collections;
 
 public class MoveUp : MonoBehaviour {
-    private bool added = false;
     public float speed = 1f;
 	// Use this for initialization
 	void Start () {

@@ -57,6 +57,12 @@
     <Reference Include="UnityEngine.Networking">
       <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEngine.Networking">
+      <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEditor">
       <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
     </Reference>
@@ -81,11 +87,15 @@
     <Compile Include="Assets\Scripts\Background Scripts\ScenerySpawner.cs" />
     <Compile Include="Assets\Scripts\BoundaryTrigger.cs" />
     <Compile Include="Assets\Scripts\CameraMove.cs" />
+    <Compile Include="Assets\Scripts\ClawYPos.cs" />
     <Compile Include="Assets\Scripts\CollideSound.cs" />
     <Compile Include="Assets\Scripts\Crane\ClawAnimation.cs" />
+    <Compile Include="Assets\Scripts\Crane\ClawLine.cs" />
+    <Compile Include="Assets\Scripts\CraneManager.cs" />
     <Compile Include="Assets\Scripts\DragRigidbody.cs" />
     <Compile Include="Assets\Scripts\MoveUp.cs" />
     <Compile Include="Assets\Scripts\ObjectManager.cs" />
+    <Compile Include="Assets\Scripts\RopeRender.cs" />
     <Compile Include="Assets\Scripts\Spawner.cs" />
     <Compile Include="Assets\Scripts\follwCamera.cs" />
   </ItemGroup>

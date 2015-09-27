@@ -5,15 +5,14 @@ public class Spawner : MonoBehaviour {
 
     public GameObject[] spawnables;
     public static bool hasObject;
-    Animator mator;
+	CraneManager crane;
 
 	// Use this for initialization
 	void Start () {
-        Spawn();
-        mator = GetComponentInParent<Animator>();
+		crane = GetComponentInParent<CraneManager>();
     }
 
-    void Spawn()
+    public void Spawn()
     {
         GameObject go = (GameObject)Instantiate((GameObject)spawnables[0], transform.position, transform.rotation);
         go.transform.parent = transform;
@@ -24,16 +23,9 @@ public class Spawner : MonoBehaviour {
     void Update()
     {
         GameObject[] gos = GameObject.FindGameObjectsWithTag("floating");
-        if (gos.Length == 0 && !mator.GetCurrentAnimatorStateInfo(0).IsName("CraneTurn"))
+        if (gos.Length == 0)
         {
-            mator.SetTrigger("Grab");
+			crane.GrabNewItem();
         }
-
-        if (gos.Length == 0 && mator.GetCurrentAnimatorStateInfo(0).IsName("CraneTurn") && mator.GetCurrentAnimatorStateInfo(0).normalizedTime >= .5)
-        {
-            Spawn();
-            mator.ResetTrigger("Grab");
-        }
-
     }
 }
